@@ -11,7 +11,7 @@ server.get('/', (req, res) => {
 })
 
 server.get('/:numberOfEntries', (req, res) => {
-    let numberOfEntries = req.params.numberOfEntries;
+    let numberOfEntries = +req.params.numberOfEntries;
     let data = generateData(numberOfEntries);    
     res.status(201).json(data)
 })
