@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "name": "asylumapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attaris978/asylumapi.git"
+  },
+  "author": "Ryan Magro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attaris978/asylumapi/issues"
+  },
+  "homepage": "https://github.com/attaris978/asylumapi#readme",
+  "description": ""
+}
