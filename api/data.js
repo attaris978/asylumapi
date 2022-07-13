@@ -5,7 +5,7 @@ const caseOutcome = () => ["Deny/Referral", "Grant", "Admin Close/Dismissal"][Ma
 const completion = () => new Date(Date.now() - Math.random() * 36 * 1000 * 60 * 60 * 24 * 30).toISOString();
 const currentDate = () => new Date(Date.now()).toISOString();
 
-module.exports = Array.from({length: 10}, () => {
+const generateData = (numberOfEntries = 20) => Array.from({length: numberOfEntries}, () => {
   return {
     "asylumOffice": asylumOffice(),
     "citizenship" : citizenship(), 
@@ -15,3 +15,5 @@ module.exports = Array.from({length: 10}, () => {
     "currentDate" : currentDate()
   }
 })
+
+module.exports = generateData;

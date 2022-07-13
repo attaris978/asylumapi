@@ -1,12 +1,12 @@
 const express = require('express');
-const data = require('./data');
+const generateData = require('./data');
 
 const server = express();
 
 server.use(express.json());
 
-server.get('/api', (req, res) => {
-    console.log("Well we're there")
+server.get('/', (req, res) => {
+    let data = generateData();    
     res.status(201).json(data)
 })
 
