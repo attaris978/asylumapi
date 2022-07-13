@@ -5,8 +5,9 @@ const caseOutcome = () => ["Deny/Referral", "Grant", "Admin Close/Dismissal"][Ma
 const completion = () => new Date(Date.now() - Math.random() * 36 * 1000 * 60 * 60 * 24 * 30).toISOString();
 const currentDate = () => new Date(Date.now()).toISOString();
 
-const generateData = (numberOfEntries = 20) => Array.from({length: numberOfEntries}, () => {
+const generateData = (numberOfEntries = 20) => Array.from({length: numberOfEntries}, (v,i) => {
   return {
+    "caseId" : i,
     "asylumOffice": asylumOffice(),
     "citizenship" : citizenship(), 
     "raceOrEthnicity" : raceOrEthnicity(),
