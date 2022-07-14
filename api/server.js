@@ -14,10 +14,4 @@ server.get('/cases', (req, res) => {
     res.status(201).json(filteredData)
 })
 
-server.get('/cases/:numberOfEntries', (req, res) => {
-    let numberOfEntries = +req.params.numberOfEntries;
-    let data = generateData(numberOfEntries);    
-    res.status(201).json(data)
-})
-
 module.exports = server;
