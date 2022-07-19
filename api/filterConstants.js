@@ -1,4 +1,4 @@
-export const officeRegions = [
+const officeRegions = [
   {
     code: 'zar',
     location: { city: 'Arlington', state: 'VA' },
@@ -95,7 +95,7 @@ export const officeRegions = [
   },
 ];
 
-export const continentEnum = Object.freeze({
+const continentEnum = Object.freeze({
   africa: 'Africa',
   asia: 'Asia',
   europe: 'Europe',
@@ -105,7 +105,7 @@ export const continentEnum = Object.freeze({
   unknown: 'Unknown',
 });
 
-export const regions = [
+const regions = [
   { territory: 'AFGHANISTAN', continent: continentEnum.asia },
   { territory: 'ALBANIA', continent: continentEnum.europe },
   { territory: 'ALGERIA', continent: continentEnum.africa },
@@ -300,3 +300,8 @@ export const regions = [
   { territory: 'ZAMBIA', continent: continentEnum.africa },
   { territory: 'ZIMBABWE', continent: continentEnum.africa },
 ];
+
+module.exports = {
+  officeRegions,
+  regions
+}
