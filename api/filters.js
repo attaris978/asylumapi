@@ -5,7 +5,7 @@ const filter = (req, cases) => {
         cases = cases.filter(entry => offices.includes(entry.asylumOffice))
     }
     if (req.query?.citizenship) {
-        let citizenships = req.query.citizenship.split(",");
+        let citizenships = req.query.citizenship.split("0");
         cases = cases.filter(entry => citizenships.includes(entry.citizenship))
     }
     if (req.query?.caseOutcome) {
