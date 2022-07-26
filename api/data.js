@@ -30,8 +30,7 @@ const generateData = (numberOfEntries = 200) =>
 
 
 
-const testAsylumOffice = () => 
-  officeList[Math.floor(Math.random() * officeList.length)];
+const testAsylumOffice = () => "ny";  
 const testCitizenship = () => 123;
   
 const testCaseOutcome = () =>
