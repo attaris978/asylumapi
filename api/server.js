@@ -25,7 +25,7 @@ server.get('/summary', (req, res) => {
 })
 
 server.get('/shortsummary', (req, res) => {                  
-    res.status(201).json(abbreviatedSummary);
+    res.status(201).json(abbreviatedSummary.map(each => ({c: each.c, y: each.y})));
 })
 
 
