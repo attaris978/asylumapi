@@ -38,9 +38,9 @@ const testCaseOutcome = () =>
   ['Deny/Referral', 'Grant', 'Admin Close/Dismissal'][
     Math.floor(Math.random() * 3)
   ];
-const testCompletion = () => "01-12-2022";
+const testCompletion = () => "01-12-22";
   
-const testCurrentDate = () => "01-12-2022";
+const testCurrentDate = () => "01-12-22";
 
   const generateTestData = (numberOfEntries = 10000) =>
 Array.from({ length: numberOfEntries }, () => {
