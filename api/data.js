@@ -47,11 +47,11 @@ const testCurrentDate = () => new Date(Date.now()).toISOString();
   const generateTestData = (numberOfEntries = 10000) =>
 Array.from({ length: numberOfEntries }, () => {
   return {
-    asylumOffice: testAsylumOffice(),
-    citizenship: testCitizenship(),
-    caseOutcome: testCaseOutcome(),
-    completion: testCompletion(),
-    currentDate: testCurrentDate(),
+    a: testAsylumOffice(),
+    c: testCitizenship(),
+    o: testCaseOutcome(),
+    t: testCompletion(),
+    e: testCurrentDate(),
   };
 });
 
