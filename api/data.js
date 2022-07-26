@@ -34,10 +34,10 @@ const testAsylumOffice = () => "a";
 const testCitizenship = () => 123;
   
 const testCaseOutcome = () => 1;
+
+const testCompletion = () => "aaaa";
   
-const testCompletion = () => "01-12-22";
-  
-const testCurrentDate = () => "01-12-22";
+const testCurrentDate = () => "aaaa";
 
   const generateTestData = (numberOfEntries = 10000) =>
 Array.from({ length: numberOfEntries }, () => {
