@@ -42,8 +42,8 @@ const abbreviatedSummary = regions.map( region => {
     return {
         c: region.territory,
         y: {
-            calendar: years.map( year => countryYear(year)),
-            fiscal: years.map( year => countryYear(year)),
+            calendar: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
+            fiscal: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
         },
         m: countryMonths(years).map( each => ({c: each.cYear, f: each.fYear, g: each.grant, d: each.deny, x: each.dismiss}))
     }
