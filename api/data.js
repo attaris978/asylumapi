@@ -28,4 +28,31 @@ const generateData = (numberOfEntries = 200) =>
     };
   });
 
-module.exports = generateData;
+
+
+  const testAsylumOffice = () =>
+  officeList[Math.floor(Math.random() * officeList.length)];
+const testCitizenship = () =>
+  regionList[Math.floor(Math.random() * regionList.length)];
+const testCaseOutcome = () =>
+  ['Deny/Referral', 'Grant', 'Admin Close/Dismissal'][
+    Math.floor(Math.random() * 3)
+  ];
+const testCompletion = () =>
+  new Date(
+    Date.now() - Math.random() * 36 * 1000 * 60 * 60 * 24 * 30
+  ).toISOString();
+const testCurrentDate = () => new Date(Date.now()).toISOString();
+
+  const generateTestData = (numberOfEntries = 10000) =>
+Array.from({ length: numberOfEntries }, () => {
+  return {
+    asylumOffice: testAsylumOffice(),
+    citizenship: testCitizenship(),
+    caseOutcome: testCaseOutcome(),
+    completion: testCompletion(),
+    currentDate: testCurrentDate(),
+  };
+});
+
+module.exports = { generateData, generateTestData};
