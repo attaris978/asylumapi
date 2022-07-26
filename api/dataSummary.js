@@ -38,4 +38,14 @@ const generatedSummary = regions.map( region => {
     }
 });
 
-module.exports = generatedSummary;
+const abbreviatedSummary = regions.map( region => {
+    return {
+        c: region.territory,
+        y: {
+            calendar: years.map( year => countryYear(year)),
+            fiscal: years.map( year => countryYear(year)),
+        },
+        m: countryMonths(years).map( each => ({c: each.cYear, f: each.fYear, g: each.grant, d: each.deny, x: each.dismiss}))
+    }
+});
+module.exports = {generatedSummary, abbreviatedSummary};

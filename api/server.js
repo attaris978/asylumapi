@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const {generateData, generateTestData} = require('./data');
 const filterData = require('./filters');
-const generatedSummary = require('./dataSummary');
+const {generatedSummary, abbreviatedSummary} = require('./dataSummary');
 
 const server = express();
 
@@ -22,6 +22,10 @@ server.get('/testing', (req, res) => {
 
 server.get('/summary', (req, res) => {                  
     res.status(201).json(generatedSummary);
+})
+
+server.get('/shortsummary', (req, res) => {                  
+    res.status(201).json(abbreviatedSummary);
 })
 
 
