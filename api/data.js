@@ -30,10 +30,10 @@ const generateData = (numberOfEntries = 200) =>
 
 
 
-  const testAsylumOffice = () =>
+const testAsylumOffice = () => 
   officeList[Math.floor(Math.random() * officeList.length)];
-const testCitizenship = () =>
-  regionList[Math.floor(Math.random() * regionList.length)];
+const testCitizenship = () => "AAA";
+  
 const testCaseOutcome = () =>
   ['Deny/Referral', 'Grant', 'Admin Close/Dismissal'][
     Math.floor(Math.random() * 3)
