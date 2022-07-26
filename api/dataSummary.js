@@ -38,12 +38,12 @@ const generatedSummary = regions.map( region => {
     }
 });
 
-const abbreviatedSummary = regions.map( region => {
+const abbreviatedSummary = regions.map( () => {
     return {
-        c: region.territory,
+        c: 123,
         y: {
-            calendar: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
-            fiscal: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
+            c: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
+            f: years.map( year => countryYear(year)).map(each => ({y: each.fYear, g: each.grant, d: each.deny, x: each.dismiss})),
         },
         m: countryMonths(years).map( each => ({c: each.cYear, f: each.fYear, g: each.grant, d: each.deny, x: each.dismiss}))
     }
