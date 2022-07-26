@@ -30,13 +30,11 @@ const generateData = (numberOfEntries = 200) =>
 
 
 
-const testAsylumOffice = () => "ny";  
+const testAsylumOffice = () => "a";  
 const testCitizenship = () => 123;
   
-const testCaseOutcome = () =>
-  ['Deny/Referral', 'Grant', 'Admin Close/Dismissal'][
-    Math.floor(Math.random() * 3)
-  ];
+const testCaseOutcome = () => 1;
+  
 const testCompletion = () => "01-12-22";
   
 const testCurrentDate = () => "01-12-22";
