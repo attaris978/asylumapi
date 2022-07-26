@@ -21,7 +21,7 @@ server.get('/testing', (req, res) => {
 })
 
 server.get('/summary', (req, res) => {                  
-    res.status(201).json(generatedSummary.map( country => ({country: country.country, year: country.month})))
+    res.status(201).json(generatedSummary);
 })
 
 
