@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const {generateData, generateTestData} = require('./data');
+const documentsList = require('./documents');
 const filterData = require('./filters');
 const {generatedSummary, abbreviatedSummary} = require('./dataSummary');
 
@@ -28,5 +29,9 @@ server.get('/shortsummary', (req, res) => {
     res.status(201).json(abbreviatedSummary.map(each => ({c: each.c, y: each.y})));
 })
 
+
+server.get('/documents', (req, res) => {                  
+    res.status(201).json(documentsList);
+})
 
 module.exports = server;
