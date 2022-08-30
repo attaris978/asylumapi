@@ -34,7 +34,7 @@ server.get('/documents', (req, res) => {
     res.status(201).json(documentsList);
 })
 
-server.delete('/owner_account/:owner_account_id/document/:uuid', (req, res) => {    
+server.delete('/documents/owner_account/:owner_account_id/document/:uuid', (req, res) => {    
     res.status(200).send(`Deleted ${req.params.uuid} from account ${req.params.owner_account_id}`);
 })
 
